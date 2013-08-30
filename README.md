@@ -2,7 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/rogeliog/flight-dropdown.png)](http://travis-ci.org/rogeliog/flight-dropdown)
 
-A [Flight](https://github.com/flightjs/flight) component for creating dropdowns
+A [Flight](https://github.com/flightjs/flight) component for creating dropdowns.
+
+flight-dropdown only takes care of the JS part of the dropdown and leaves styling to the user.
 
 ## Installation
 
