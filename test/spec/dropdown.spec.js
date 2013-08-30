@@ -28,8 +28,8 @@ describeComponent('lib/dropdown', function () {
         expect($menuSelector).not.toBeVisible();
       });
 
-      it('fires dropdown-menu-closed', function () {
-        var eventSpy = spyOnEvent(document, 'dropdown-menu-closed');
+      it('fires dropdown-closed', function () {
+        var eventSpy = spyOnEvent(document, 'dropdown-closed');
         $toggleSelector.trigger('click');
         expect(eventSpy).toHaveBeenTriggeredOn(document);
       });
@@ -45,8 +45,8 @@ describeComponent('lib/dropdown', function () {
         expect($menuSelector).toBeVisible();
       });
 
-      it('fires dropdown-menu-closed', function () {
-        var eventSpy = spyOnEvent(document, 'dropdown-menu-opened');
+      it('fires dropdown-closed', function () {
+        var eventSpy = spyOnEvent(document, 'dropdown-opened');
         $toggleSelector.trigger('click');
         expect(eventSpy).toHaveBeenTriggeredOn(document);
       });
@@ -70,8 +70,8 @@ describeComponent('lib/dropdown', function () {
       expect($menuSelector).not.toBeVisible();
     });
 
-    it('fires dropdown-menu-closed', function () {
-      var eventSpy = spyOnEvent(document, 'dropdown-menu-closed');
+    it('fires dropdown-closed', function () {
+      var eventSpy = spyOnEvent(document, 'dropdown-closed');
       this.component.trigger('ui-needs-dropdown-close');
       expect(eventSpy).toHaveBeenTriggeredOn(document);
     });
@@ -94,8 +94,8 @@ describeComponent('lib/dropdown', function () {
       expect($menuSelector).toBeVisible();
     });
 
-    it('fires dropdown-menu-closed', function () {
-      var eventSpy = spyOnEvent(document, 'dropdown-menu-opened');
+    it('fires dropdown-opened', function () {
+      var eventSpy = spyOnEvent(document, 'dropdown-opened');
       this.component.trigger('ui-needs-dropdown-open');
       expect(eventSpy).toHaveBeenTriggeredOn(document);
     });
