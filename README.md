@@ -1,8 +1,8 @@
 # flight-dropdown
 
-[![Build Status](https://secure.travis-ci.org/<username>/flight-dropdown.png)](http://travis-ci.org/<username>/flight-dropdown)
+[![Build Status](https://secure.travis-ci.org/rogeliog/flight-dropdown.png)](http://travis-ci.org/rogeliog/flight-dropdown)
 
-A [Flight](https://github.com/flightjs/flight) component for…
+A [Flight](https://github.com/flightjs/flight) component for creating dropdowns
 
 ## Installation
 
@@ -12,7 +12,42 @@ bower install --save flight-dropdown
 
 ## Example
 
-…
+```javascript
+define(function (require) {
+
+  'use strict';
+
+   var dropdown = require('component/dropdown');
+
+  return initialize;
+
+  function initialize() {
+    dropdown.attachTo('.dropdown');
+
+    dropdown.attachTo('.dropdown2', {
+      toggleSelector: '.the-toggle',
+      menuSelector: '.the-menu',
+      hideFunction: ['fadeOut', [3000]]
+    });
+  }
+});
+```
+
+### Events
+
+* `dropdown-opened`: fires when the dropdown is opened
+* `dropdown-closed`: fires when the dropdown is closed
+* `ui-needs-dropdown-open`: when fired the dropdown will open
+* `ui-needs-dropdown-close`: when fired the dropdown will close
+
+### Customize it!
+
+When attaching a dropdown component you can tweak the following attributes:
+
+* toggleSelector[default: '.dropdown-toggle'] CSS selector that will toggle the dropdown
+* menuSelector[default: '.dropdown-menu'] CSS selector that includes the dropdown
+* hideFunction[default: '[hide]'] Function for hiding the dropdown. Example ['fadeOut', [100]]
+* showFunction[default: '[show]'] Function for showing the dropdown. Example ['slideDown', [200]]
 
 ## Development
 
